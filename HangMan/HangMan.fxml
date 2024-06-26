@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HangManController">
+   <ImageView fitHeight="175.0" fitWidth="288.0">
+      <Image url="@hangmanpic.jpg" />
+   </ImageView>
+   <Label alignment="CENTER" layoutX="310.0" layoutY="30.0" prefHeight="167.0" prefWidth="201.0" text="Bs&quot;d &#10;&#10;Welcome to Hang-Man game&#10;we are sure u gonna enjoy! &#10;" textAlignment="CENTER" textFill="#0a746d">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <Line fx:id="line0" endX="-38.0" layoutX="135.0" layoutY="442.0" startX="-100.0" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line1" endX="-100.0" endY="111.0" layoutX="168.0" layoutY="332.0" startX="-100.0" startY="-128.33334350585938" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line2" endX="33.0" layoutX="148.0" layoutY="218.0" startX="-100.0" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line3" endX="-127.0" endY="33.0" layoutX="194.0" layoutY="217.0" startX="-100.0" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line4" endX="100.0" layoutX="81.0" layoutY="218.0" startX="100.0" startY="34.666656494140625" strokeWidth="2.0" visible="false" />
+   <Ellipse fx:id="line5" fill="#f2f2f2" layoutX="180.0" layoutY="273.0" radiusX="22.0" radiusY="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line6" endX="100.0" layoutX="81.0" layoutY="294.0" startX="100.0" startY="80.0" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line7" endX="-66.0" endY="33.666656494140625" layoutX="282.0" layoutY="313.0" startX="-100.0" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line8" endX="-134.66665649414062" endY="33.666656494140625" layoutX="281.0" layoutY="314.0" startX="-100.0" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line9" endX="-66.0" endY="33.666656494140625" layoutX="282.0" layoutY="374.0" startX="-100.0" strokeWidth="2.0" visible="false" />
+   <Line fx:id="line10" endX="-127.0" endY="33.0" layoutX="280.0" layoutY="374.0" startX="-100.0" strokeWidth="2.0" visible="false" />
+   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="TRANSPARENT" height="264.0" layoutX="25.0" layoutY="191.0" stroke="#0a746d" strokeType="INSIDE" strokeWidth="1.5" width="245.0" />
+   <Label fx:id="guessWord" alignment="CENTER" layoutX="310.0" layoutY="293.0" prefHeight="34.0" prefWidth="185.0" text="Word to guess" textAlignment="CENTER" textFill="#0a746d">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="abc" layoutX="306.0" layoutY="239.0" onAction="#addCharacter" prefHeight="28.0" prefWidth="210.0" promptText="Please choose a character" />
+   <Label fx:id="usedChars" alignment="CENTER" layoutX="310.0" layoutY="341.0" prefHeight="44.0" prefWidth="185.0" text="you used already: &#10;" textAlignment="CENTER" textFill="#0a746d" wrapText="true">
+      <font>
+         <Font size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="newGameLabel" alignment="TOP_CENTER" layoutX="147.0" layoutY="152.0" prefHeight="143.0" prefWidth="255.0" style="-fx-background-color: #0A746D; -fx-opacity: 0.9;" text="&#10;&#10;Do you want to play again?" textAlignment="CENTER" visible="false">
+      <font>
+         <Font name="System Bold" size="12.666666984558105" />
+      </font>
+   </Label>
+   <Button fx:id="yes" layoutX="197.0" layoutY="238.0" mnemonicParsing="false" onAction="#newGame" style="-fx-background-color: white; -fx-opacity: 0.9;" text="yes" textAlignment="CENTER" visible="false" />
+   <Button fx:id="no" layoutX="298.0" layoutY="238.0" mnemonicParsing="false" onAction="#newGame" style="-fx-background-color: white; -fx-opacity: 0.9;" text="no" textAlignment="CENTER" visible="false" />
+</AnchorPane>
